@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Book discoTitanic = new Book("Disco Titanic");
         Author rpGheo = new Author("Radu Pavel Gheo");
+
         discoTitanic.addAuthor(rpGheo);
         int indexChapterOne = discoTitanic.createChapter("Capitolul 1");
         Chapter chp1 = discoTitanic.getChapter(indexChapterOne);
@@ -14,6 +15,7 @@ public class Main {
         scOneOne.createNewParagraph("Paragraph 4");
         scOneOne.createNewTable("Table 1");
         scOneOne.createNewParagraph("Paragraph 5");
+
         scOneOne.print();
     }
 }

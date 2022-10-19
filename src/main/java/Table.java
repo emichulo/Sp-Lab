@@ -1,4 +1,4 @@
-public class Table {
+public class Table implements Element{
     private String name;
 
     public Table(String name) {

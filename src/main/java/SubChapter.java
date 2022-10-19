@@ -1,10 +1,10 @@
+import java.util.ArrayList;
 import java.util.List;
 
-public class SubChapter {
+public class SubChapter implements Element{
     private String name;
-    private List<Image> imageList;
-    private List<Paragraph> paragraphList;
-    private List<Table> tableList;
+
+    List<Element> e1 = new ArrayList<>();
 
     public SubChapter(String name) {
         this.name = name;
@@ -12,23 +12,24 @@ public class SubChapter {
 
     public void createNewImage(String img) {
         Image image = new Image(img);
-        imageList.add(image);
+        e1.add(image);
     }
 
     public void createNewParagraph(String prg) {
         Paragraph paragraph = new Paragraph(prg);
-        paragraphList.add(paragraph);
+        e1.add(paragraph);
     }
 
     public void createNewTable(String tbl) {
         Table table = new Table(tbl);
-        tableList.add(table);
+        e1.add(table);
     }
 
     public void print() {
-        System.out.println("Subchapter:" + name +
-                "\nImage with name: " + imageList +
-                "\nParagraph: " + paragraphList +
-                "\nTable with Title: " + tableList);
+        System.out.println(name);
+        for (Element e:e1) {
+            e.print();
+
+        }
     }
 }
